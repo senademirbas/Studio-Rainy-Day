@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Studio Rainy Day</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="preload" href="css/styles.css" as="style">
+<link rel="preload" href="js/script.js" as="script">
+
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com">
+<link rel="dns-prefetch" href="https://fonts.gstatic.com">
+
+<link rel="prefetch" href="games.html" as="document">
+<link rel="prefetch" href="about.html" as="document">
+
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+<body class="page-main">
+
+    <div class="content-wrapper">
+
+
+        <div class="animated-content">
+            <a href="https://x.com/studiorainyday" target="_blank" class="bookmark steam-bm" style="position: absolute; top: 296px; left: 601px; z-index: 1;">
+                <img src="assets/main/Boomark 1.png" alt="Steam">
+            </a>
+            <a href="https://x.com/studiorainyday" target="_blank" class="bookmark x-bm" style="position: absolute; top: 296px; left: 759px; z-index: 1;">
+                <img src="assets/main/Boomark 2.png" alt="X">
+            </a>
+            <a href="https://studio-rainy-day.itch.io" target="_blank" class="bookmark itch-bm" style="position: absolute; top: 296px; left: 909px; z-index: 1;">
+                <img src="assets/main/Boomark 3.png" alt="Itch">
+            </a>
+            <div class="box-rabbit" style="position: absolute; top: 145px; left: 292px; z-index: 2;">
+                <img src="assets/main/Box 1.png" alt="Rainy Day Logo">
+            </div>
+            <div class="box-logo" style="position: absolute; top: 319px; left: 346px; z-index: 6;">
+                <img src="assets/main/Logo.png" alt="Logo">
+            </div>
+            <div style="position: absolute; top: 399px; left: 691px; z-index: 6; width: 347px; font-family: 'Outfit', sans-serif; font-weight: 500; font-size: 32px; color: #9F3508; line-height: 1.3; text-align: left;">
+                Rainy Day is a studio that utilizes RPG Maker to create interactive stories exploring themes and emotions that inspire their art, as well as fears that gnaw at their minds.
+            </div>
+            <div class="box-notebook" style="position: absolute; top: -2px; left: 5px; z-index: 0;">
+                <img src="assets/main/Box 2.png" alt="Main Notebook">
+            </div>
+            <div style="position: absolute; top: 405px; left: 1194px; z-index: 5;">
+                <img id="main-bunny" src="assets/main/Bun.gif" alt="Bunny" style="cursor: pointer;">
+            </div>
+            <a href="games.html" class="menu-btn" style="position: absolute; top: 1074px; left: 1053px; z-index: 6;">
+                <img src="assets/main/Button 1.png" alt="Games">
+            </a>
+            <a href="about.html" class="menu-btn" style="position: absolute; top: 1251px; left: 1053px; z-index: 6;">
+                <img src="assets/main/Button 2.png" alt="About Us">
+            </a>
+            <a href="mailto:studiorainyday@gmail.com" class="menu-btn" style="position: absolute; top: 1428px; left: 1053px; z-index: 6;">
+                <img src="assets/main/Button 3.png" alt="Contact">
+            </a>
+            <div id="letter-bg" style="position: absolute; top: 1210px; left: 496px; z-index: 5;">
+                <img src="assets/main/Box 3.png" alt="Letter Bg">
+            </div>
+            <div id="lydia-signature" style="position: absolute; top: 906px; left: 492px; z-index: 6;">
+                <img src="assets/main/Box 4.png" alt="Lydia Was Here">
+            </div>
+        </div> 
+    </div>
+    
+    <svg style="display: none;">
+      <defs>
+        <filter id="smooth-flow">
+          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="3" result="noise" seed="1">
+            <animate attributeName="baseFrequency" dur="15s" values="0.015;0.008;0.015" repeatCount="indefinite" />
+          </feTurbulence>
+          <feDisplacementMap in="SourceGraphic" in2="noise" scale="40" />
+        </filter>
+        <filter id="oil-swirl">
+           <feTurbulence type="turbulence" baseFrequency="0.008" numOctaves="4" result="turbulence">
+              <animate attributeName="baseFrequency" dur="20s" values="0.008;0.012;0.008" repeatCount="indefinite"/>
+           </feTurbulence>
+           <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="100" xChannelSelector="R" yChannelSelector="G" />
+           <feColorMatrix type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" />
+        </filter>
+      </defs>
+    </svg>
+
+<script src="js/script.js"></script>
+</body>
+</html>

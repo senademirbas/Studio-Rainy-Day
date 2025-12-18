@@ -1,0 +1,74 @@
+:root {
+    --design-width: 1920px;
+    --design-height: 2180px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    background-color: #1a1a1a;
+
+    font-family: 'Outfit', sans-serif;
+}
+
+
+body {
+    background-repeat: no-repeat;
+    background-position: center top; 
+    background-size: cover; 
+    background-attachment: fixed;
+
+    display: block; 
+}
+
+
+body.page-main  { background-image: url('../assets/main/Base.png'); }
+body.page-about { background-image: url('../assets/about/Base.png'); }
+body.page-games { background-image: url('../assets/games/Base.png'); }
+
+
+.content-wrapper {
+    width: var(--design-width);
+    height: var(--design-height);
+    position: absolute;
+    flex-shrink: 0;
+    will-change: transform;
+    box-shadow: none;
+}
+
+
+.animated-content {
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    animation: fadeInContent 0.8s ease-out forwards 0.2s; 
+}
+@keyframes fadeInContent { from { opacity: 0; } to { opacity: 1; } }
+
+.bookmark { transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1); cursor: pointer; }
+.bookmark:hover { transform: translateY(20px); }
+.bookmark:active { transform: translateY(25px) scale(0.98) !important; transition-duration: 0.1s; }
+
+.menu-btn img { transition: transform 0.2s ease-in-out, filter 0.2s ease; cursor: pointer; transform-origin: center center; }
+.menu-btn:hover img { transform: scale(1.05) rotate(-1deg); filter: brightness(1.1); }
+.menu-btn:active img { transform: scale(0.95) rotate(0deg); filter: brightness(0.9); transition-duration: 0.05s; }
+
+#main-bunny { transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+
+#letter-bg { position: relative; z-index: 5; transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s ease; pointer-events: auto; }
+#letter-bg:hover { z-index: 1000 !important; cursor: help; transform: scale(1.1) translateY(-15px) rotate(2deg); filter: sepia(1) hue-rotate(-50deg) saturate(3) contrast(1.2) drop-shadow(0 20px 40px rgba(100, 0, 0, 0.6)); }
+
+.store-btn img { transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease; }
+.store-btn:hover img { transform: scale(1.05); filter: brightness(1.1); }
+
+.game-title, .collage-art { transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.6s ease; }
+.game-title:hover { transform: scale(1.03) translateY(-5px); filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3)); }
+.collage-art:hover { transform: scale(1.02) rotate(1deg); filter: brightness(1.05); }
+
+.credit-item { color: #8a0000; font-family: sans-serif; font-weight: bold; text-align: right; pointer-events: none; }
+.socials img { transition: transform 0.2s ease; }
+.socials img:hover { transform: scale(1.1); }
+.go-back-btn img { display: block; }
+
