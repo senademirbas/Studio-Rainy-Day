@@ -1,7 +1,7 @@
 # 🌧️ Studio Rainy Day - Official Website
 
 <div align="center">
-  <img src="assets/main/Base.png" alt="Studio Rainy Day Banner" width="100%" />
+  <img src="assets\main\Logo.png" alt="Studio Rainy Day Banner" width="100%" />
   
   <p>
     The official interactive hub for <strong>Studio Rainy Day</strong>, creators of the RPG Maker game <em>"Lydia Was Here"</em>.
@@ -9,10 +9,7 @@
 
   <p>
     <a href="[https://studio-rainy-day.itch.io](https://studio-rainy-day.itch.io)">
-      <img src="[https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itch.io&logoColor=white](https://img.shields.io/badge/Itch.io-FA5C5C?style=for-the-badge&logo=itch.io&logoColor=white)" alt="Itch.io" />
-    </a>
-    <a href="[https://x.com/studiorainyday](https://x.com/studiorainyday)">
-      <img src="[https://img.shields.io/badge/X](https://img.shields.io/badge/X) (Twitter)-000000?style=for-the-badge&logo=x&logoColor=white" alt="X" />
+      <img src="https://studio-rainy-day.itch.io" alt="Itch.io" />
     </a>
   </p>
 </div>
