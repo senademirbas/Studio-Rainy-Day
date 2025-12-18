@@ -7,37 +7,33 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-
     background-color: #1a1a1a;
-
     font-family: 'Outfit', sans-serif;
 }
-
 
 body {
     background-repeat: no-repeat;
     background-position: center top; 
     background-size: cover; 
     background-attachment: fixed;
-
     display: block; 
 }
 
-
-body.page-main  { background-image: url('../assets/main/Base.png'); }
-body.page-about { background-image: url('../assets/about/Base.png'); }
-body.page-games { background-image: url('../assets/games/Base.png'); }
-
+body.page-main  { background-image: url('../assets/main/Base.webp'); }
+body.page-about { background-image: url('../assets/about/Base.webp'); }
+body.page-games { background-image: url('../assets/games/Base.webp'); }
 
 .content-wrapper {
     width: var(--design-width);
     height: var(--design-height);
     position: absolute;
     flex-shrink: 0;
+    
+    contain: layout paint; 
+    
     will-change: transform;
     box-shadow: none;
 }
-
 
 .animated-content {
     width: 100%;
@@ -71,4 +67,3 @@ body.page-games { background-image: url('../assets/games/Base.png'); }
 .socials img { transition: transform 0.2s ease; }
 .socials img:hover { transform: scale(1.1); }
 .go-back-btn img { display: block; }
-
