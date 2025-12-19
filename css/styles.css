@@ -9,16 +9,37 @@ html, body {
     width: 100%;
     background-color: #1a1a1a;
     font-family: 'Outfit', sans-serif;
+    min-height: 100vh; 
+    /* Yatay taşmayı engelle */
+   
+    
 }
+
+/* styles.css dosyasında body kısmını bulun ve şu şekilde güncelleyin */
 
 body {
-    background-repeat: no-repeat;
-    background-position: center top; 
+    /* Görselin üst kısmı (raf/perdeler) her zaman görünsün */
+    background-position: center top !important; 
+    
     background-size: cover; 
-    background-attachment: fixed;
-    display: block; 
+    background-attachment: fixed; /* Masaüstünde sabit kalsın */
+    background-color: #2c3e50; /* Görsel yokken görünecek renk */
+    
+    /* Min yükseklik ve taşma ayarları */
+    min-height: 100vh;
+    overflow-x: hidden;
 }
 
+/* Mobilde arkaplanın davranışını düzeltmek için */
+@media screen and (max-width: 1024px) {
+    body {
+        /* Mobilde 'scroll' daha stabil çalışır ve siyah boşlukları önler */
+        background-attachment: scroll !important; 
+        
+        /* Mobilde de üstten hizalayalım ki görselin başı görünsün */
+        background-position: center top !important; 
+    }
+}
 body.page-main  { background-image: url('../assets/main/Base.webp'); }
 body.page-about { background-image: url('../assets/about/Base.webp'); }
 body.page-games { background-image: url('../assets/games/Base.webp'); }

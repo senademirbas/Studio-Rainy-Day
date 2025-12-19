@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const baseHeight = 2180;
 
     let resizeFrame;
-
-    function resizeSite() {
+function resizeSite() {
         if (!wrapper) return;
 
         const screenWidth = window.innerWidth;
@@ -20,26 +19,39 @@ document.addEventListener("DOMContentLoaded", () => {
         resizeFrame = requestAnimationFrame(() => {
             let scale;
 
+            // --- MOBİL (1024px altı) ---
             if (screenWidth < 1024) {
-                document.body.style.height = '100vh';
-                document.body.style.overflow = 'hidden';
+                document.body.style.overflowX = 'hidden';
+                document.body.style.overflowY = 'auto'; // Kaydırma gerekirse açılır
                 
-                const mobileFocusWidth = 1100; 
-                scale = screenWidth / mobileFocusWidth;
+                // Tasarımın orijinal genişliğine (1920) göre oranla
+                scale = (screenWidth / baseWidth); 
                 
-                if (scale > 0.85) scale = 0.85;
-
-                wrapper.style.transformOrigin = 'center center';
+                // DÜZELTME BURADA: Mobilde 'center center' kullanıyoruz ki tam ortadan küçülsün.
+                wrapper.style.transformOrigin = 'center center'; 
+                
                 wrapper.style.top = '50%';
                 wrapper.style.left = '50%';
+                // Hem dikey hem yatay olarak tam ortaya sabitle
                 wrapper.style.transform = `translate(-50%, -50%) scale(${scale})`;
 
+                // İçeriğin sığması için yükseklik ayarı
+                // Ekran içeriği kesiyorsa body uzasın, kesmiyorsa tam ekran kalsın
+                const contentHeight = baseHeight * scale;
+                if (contentHeight < window.innerHeight) {
+                    document.body.style.height = '100vh';
+                } else {
+                    document.body.style.height = `${contentHeight + 50}px`;
+                }
+
             } else {
+                // --- MASAÜSTÜ (Desktop) ---
                 document.body.style.height = 'auto';
                 document.body.style.overflowY = 'auto';
                 document.body.style.overflowX = 'hidden';
 
-                scale = (screenWidth / baseWidth) * 0.80; 
+                // Masaüstünde biraz küçültme (%70) tercihinizi koruyoruz
+                scale = (screenWidth / baseWidth) * 0.70; 
 
                 if (scale > 1.0) scale = 1.0;
 
