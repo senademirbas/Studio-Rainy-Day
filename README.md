@@ -8,7 +8,7 @@
   </p>
 
   <p>
-    <a href="[https://studio-rainy-day.itch.io](https://studio-rainy-day.itch.io)">
+    <a href="[https://studiorainyday.com/games](https://studiorainyday.com/games)">
       <img src="https://studio-rainy-day.itch.io" alt="Itch.io" />
     </a>
   </p>
