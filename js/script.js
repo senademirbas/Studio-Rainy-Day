@@ -12,57 +12,72 @@ document.addEventListener("DOMContentLoaded", () => {
     let resizeFrame;
 
 
+
 function resizeSite() {
+    const wrapper = document.querySelector('.content-wrapper');
     if (!wrapper) return;
 
+
+    const masaustuOrani = 0.75; 
+
+   
+    const mobilOrani = 1.0; 
+
+    
+    const gamesPageOffset = -100; 
+    
+  
 
     const screenWidth = document.documentElement.clientWidth || window.innerWidth;
     const baseWidth = 1920; 
     const baseHeight = 2180;
+    
+    const isGamesPage = document.body.classList.contains('page-games');
 
     cancelAnimationFrame(resizeFrame);
     resizeFrame = requestAnimationFrame(() => {
         let scale;
 
-  
+
+
         if (screenWidth < 1024) {
-            document.body.style.overflowX = 'hidden';
-            document.body.style.overflowY = 'auto'; 
             
-            scale = (screenWidth / baseWidth); 
-            
-
-            wrapper.style.transformOrigin = 'top center'; 
-
-            wrapper.style.top = '0px';
-            wrapper.style.left = '50%';
-
-            wrapper.style.transform = `translateX(-50%) scale(${scale})`;
-
-            const contentHeight = baseHeight * scale;
-           
-            document.body.style.height = `${contentHeight}px`;
-
+            scale = (screenWidth / baseWidth) * mobilOrani;
         } else {
-
-            document.body.style.height = 'auto';
-            document.body.style.overflowY = 'auto';
-            document.body.style.overflowX = 'hidden';
-
-            scale = (screenWidth / baseWidth) * 0.70; 
-
+            
+            scale = (screenWidth / baseWidth) * masaustuOrani; 
+     
             if (scale > 1.0) scale = 1.0;
+        }
 
-            wrapper.style.transformOrigin = 'top center';
-            wrapper.style.top = '0px';
-            wrapper.style.left = '50%';
-            wrapper.style.transform = `translateX(-50%) scale(${scale})`;
 
-            document.body.style.height = `${(baseHeight * scale) + 50}px`;
+        
+        wrapper.style.transformOrigin = 'top center'; 
+        wrapper.style.left = '50%';
+
+
+        if (isGamesPage) {
+            wrapper.style.top = `${gamesPageOffset}px`;
+        } else {
+            wrapper.style.top = '50px';
+        }
+
+        wrapper.style.transform = `translateX(-50%) scale(${scale})`;
+
+
+        const contentHeight = baseHeight * scale;
+        const heightAdjustment = isGamesPage ? gamesPageOffset : 0;
+        
+
+        const finalHeight = contentHeight + heightAdjustment + 50; 
+
+        if (finalHeight < window.innerHeight) {
+             document.body.style.height = '100vh';
+        } else {
+             document.body.style.height = `${finalHeight}px`;
         }
     });
 }
-
     resizeSite();
     
     window.addEventListener('resize', resizeSite);
