@@ -1,0 +1,13 @@
+# İşletim Sistemi Çöp Dosyaları
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editör Ayar Dosyaları (Gereksiz)
+.vscode/
+.idea/
+*.sublime-workspace
+
+# Log Dosyaları
+*.log
+npm-debug.log*
