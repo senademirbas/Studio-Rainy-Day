@@ -23,7 +23,13 @@ The official website of **Studio Rainy Day**, an indie game studio focused on at
 This site acts as the digital home for our upcoming game  
 🎮 **_Lydia Was Here_**, a project exploring psychological themes, emotions, and quiet fears.
 
-[🔴 Live Demo](https://studiorainyday.com)
+<div align="center">
+
+[![Website](https://img.shields.io/badge/Website-studiorainyday.com-2c3e50?style=for-the-badge&logo=google-chrome&logoColor=white)](https://studiorainyday.com)
+[![Steam](https://img.shields.io/badge/Steam-Curator_Page-171a21?style=for-the-badge&logo=steam&logoColor=white)](https://store.steampowered.com/curator/45888680/)
+[![Itch.io](https://img.shields.io/badge/Itch.io-Studio_Rainy_Day-fa5c5c?style=for-the-badge&logo=itch.io&logoColor=white)](https://studio-rainy-day.itch.io)
+
+</div>
 
 ## 🛠️ Tech Stack
 
