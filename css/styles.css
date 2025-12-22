@@ -84,3 +84,35 @@ body.page-games { background-image: url('../assets/games/Base.webp'); }
 .socials img { transition: transform 0.2s ease; }
 .socials img:hover { transform: scale(1.1); }
 .go-back-btn img { display: block; }
+
+.go-back-btn img {
+    display: block;
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease;
+    cursor: pointer;
+}
+
+.go-back-btn:hover img {
+    transform: scale(1.1) translateY(-5px); 
+    filter: brightness(1.1); 
+}
+
+.go-back-btn:active img {
+    transform: scale(0.95) translateY(0px);
+    transition-duration: 0.1s;
+}
+
+
+#main-bunny {
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent; 
+}
+
+
+#main-bunny:hover {
+    transform: scale(1.05);
+}
+
+#main-bunny:active {
+    transform: scale(0.95);
+}

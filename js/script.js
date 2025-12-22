@@ -94,22 +94,23 @@ function resizeSite() {
         }
     });
 
+
     const bunnyImg = document.getElementById('main-bunny');
     if (bunnyImg) {
         bunnyImg.addEventListener('click', function() {
-            const originalSrc = this.src;
             
             this.src = 'assets/main/BunExclamation.gif';
             this.style.position = 'relative'; 
-            this.style.top = '0px';
-            this.style.left = '-40px'; 
-            this.style.transform = 'scale(1.02)'; 
-            
+            this.style.top = '-15px';
+            this.style.left = '-45px'; 
+            this.style.transform = 'scale(1.1)'; 
+
             setTimeout(() => {
                 this.src = 'assets/main/Bun.gif';
                 this.style.top = '0px';
                 this.style.left = '0px';
-                this.style.transform = 'scale(1)'; 
+                this.style.transform = ''; 
+                
             }, 1500); 
         });
     }
