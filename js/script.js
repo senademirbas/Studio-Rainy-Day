@@ -24,7 +24,7 @@ function resizeSite() {
     const mobilOrani = 1.0; 
 
     
-    const gamesPageOffset = -100; 
+    const gamesPageOffset = 0; 
     
   
 
