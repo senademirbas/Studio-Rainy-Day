@@ -1,17 +1,14 @@
 # 🌧️ Studio Rainy Day - Official Website
 
 <div align="center">
-  <img src="assets\main\Logo.png" alt="Studio Rainy Day Banner" width="100%" />
+  <img src="assets/main/Logo.webp" alt="Studio Rainy Day Logo" width="280" />
   
+  <br />
+
   <p>
     The official interactive hub for <strong>Studio Rainy Day</strong>, creators of the RPG Maker game <em>"Lydia Was Here"</em>.
   </p>
 
-  <p>
-    <a href="[https://studiorainyday.com/games](https://studiorainyday.com/games)">
-      <img src="https://studio-rainy-day.itch.io" alt="Itch.io" />
-    </a>
-  </p>
 </div>
 
 ---
@@ -69,12 +66,12 @@ This site acts as the digital home for our upcoming game
 
 1. **Clone the repository**
    git clone [https://github.com/senademirbas/Studio-Rainy-Day.git](https://github.com/senademirbas/Studio-Rainy-Day.git)
+2. Open index.html Simply open the file in any modern web browser. For the best development experience, use VS Code with the "Live Server" extension.
 
-2. **Open `index.html`**
-   Simply open the file in any modern web browser. For the best development experience, use VS Code with the "Live Server" extension.
+## ⚖️ Copyright & License
 
----
+* © 2024-2025 Studio Rainy Day. All rights reserved.
 
-<p align="center">
-  Made with ❤️ by <strong>Studio Rainy Day</strong>
-</p>
+* All original assets, including character designs, illustrations, story elements, and the game "Lydia Was Here" are the exclusive intellectual property of Studio Rainy Day. Unauthorized use, redistribution, or modification of these visual assets is prohibited without explicit permission.
+
+<p align="center"> Made with ❤️ by <strong>Studio Rainy Day</strong> </p>
